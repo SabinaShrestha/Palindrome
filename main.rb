@@ -7,7 +7,7 @@ require "colorize"
 
 
 def check
-  puts "Please enter a word to check palindrome."
+  puts "Please enter a word to check palindrome.".colorize(:blue)
   @get_input << gets.strip.downcase
   @arr = @get_input.first.split("")
 
@@ -18,9 +18,9 @@ def check
   end
 
   if @get_arr == @arr
-    puts "You got palindrome."
+    puts "You got palindrome.".colorize(:green)
   else
-    puts "NO."
+    puts "NO.".colorize(:red)
   end
    # puts @get_arr
 end
